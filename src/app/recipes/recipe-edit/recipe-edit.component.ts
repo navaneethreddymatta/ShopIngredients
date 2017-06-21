@@ -29,7 +29,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("submit called");
+    // console.log("submit called");
     if (this.editMode) {
       this.recipeService.updateRecipe(this.id, this.recipeForm.value)
     } else {
@@ -43,7 +43,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   addIngredient() {
-    console.log("add ingredient called");
+    // console.log("add ingredient called");
     (<FormArray>this.recipeForm.get('ingredients')).push(
       new FormGroup({
         'name': new FormControl(null, Validators.required),
